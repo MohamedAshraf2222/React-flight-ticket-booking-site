@@ -1,0 +1,158 @@
+.slider__item {
+    height: 80vh;
+    width: 100%;
+
+}
+
+.airplane-1 {
+    background: url('../images/airplane-1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.airplane-2 {
+    background: url('../images/airplane-2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.airplane-3 {
+    background: url('../images/airplane-3.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.airplane-4 {
+    background: url('../images/airplane-4.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-offers-1 {
+    background: url('../images/bg-offers-1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* transform: scale(1); */
+    transition: 500ms;
+}
+
+.bg-offers-1:hover {
+    transform: scale(1.03);
+}
+
+.bg-offers-2 {
+    background: url('../images/bg-offers-2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 500ms;
+}
+
+.bg-offers-2:hover {
+    transform: scale(1.03);
+}
+
+.btn-offers:hover {
+    background-color: black;
+}
+
+.bg-cover {
+    background: linear-gradient(rgba(21, 159, 251, 0.5), rgba(24, 8, 161, 0.5));
+    height: 100%;
+}
+
+.bg-cover-offers {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    height: 100%;
+}
+
+.w-2 {
+    height: 50vh
+}
+
+.fade-in {
+    transition: obacity 1s ease;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: obacity 1s ease;
+}
+
+.hero__slider {
+    overflow: hidden;
+}
+
+.hero__slider {
+    overflow: hidden;
+}
+
+.bg-btn-feedback {
+    background: linear-gradient(rgba(0, 53, 128, 0.6), rgba(21, 159, 251, 0.8));
+}
+
+.bg-travel-1 {
+    background: url('../images/bg-travel-1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 400ms;
+}
+
+.bg-travel-1:hover,
+.bg-travel-2:hover,
+.bg-travel-3:hover,
+.bg-travel-4:hover,
+.bg-travel-5:hover {
+    transform: scale(1.02);
+}
+
+.bg-travel-2,.bg-travel-2-booking {
+    background: url('../images/bg-travel-2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 400ms;
+}
+
+.bg-travel-3 {
+    background: url('../images/bg-travel-3.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 400ms;
+}
+
+.bg-travel-4 {
+    background: url('../images/bg-travel-4.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 400ms;
+}
+
+.bg-travel-5 {
+    background: url('../images/bg-travel-5.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 400ms;
+}
+.bg-ticket{
+    background: url('../images/ticket.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: cover;
+}
+.color-green{
+    color: rgb(0, 150, 0);
+}

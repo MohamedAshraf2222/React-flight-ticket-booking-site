@@ -1,0 +1,22 @@
+.bg-btn-feedback{
+    background: linear-gradient(rgba(0, 53, 128, 0.6), rgba(21, 159, 251, 0.8));
+
+}
+.btn-login{
+    background-color: #1e40af;
+}
+.btn-login:hover{
+    background-color: #8B9B81;
+}
+.hover-color:hover{
+    color: #000;
+}
+.h-87{
+    height: 87vh;
+}
+.bg-travel-2{
+    cursor: pointer;
+}
+.hover-green:hover{
+    color: green;
+}

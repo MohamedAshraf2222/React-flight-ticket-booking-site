@@ -1,0 +1,11 @@
+img {
+    width: 50px;
+}
+
+#navbar {
+    background: linear-gradient(rgba(0, 53, 128, 0.6), rgba(21, 159, 251, 0.8));
+    background-color: rgb(0, 53, 128);
+}
+button:hover{
+    background-color: #1e40af;
+}
