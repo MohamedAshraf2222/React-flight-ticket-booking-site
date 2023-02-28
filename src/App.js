@@ -1,10 +1,11 @@
 //utilities
 // import { createBrowserRouter, Route, RouterProvider, Routes } from "react-router-dom";
-import jwtDecode from "jwt-decode";
-import { useEffect, useState } from "react";
-import { Route, Routes, useNavigate } from "react-router-dom";
+// import jwtDecode from "jwt-decode";
+import { useContext, useEffect } from "react";
+import { Route, Routes} from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import ProtectedRoute from "./Components/ProtectedRoute";
+import { AuthContext } from "./Context/Store";
 import Booking from "./Pages/Booking";
 //Pages
 import Home from "./Pages/Home";
@@ -17,6 +18,7 @@ import Register from "./Pages/Register";
 
 
 function App() {
+  const {SaveUserData} = useContext(AuthContext)
   // const router = createBrowserRouter([
   //   {
   //     path: "/",
@@ -47,27 +49,27 @@ function App() {
   //     element: <><Print /></>,
   //   }
   // ]);
-  const [userData, setUserData] = useState(null)
-  function logout() {
-    setUserData(null);
-    localStorage.removeItem('userToken');
-    navigate('/login');
-    // console.log('logout called');
-  }
-  function SaveUserData() {
-    let encodedToken = localStorage.getItem('userToken');
-    let decodedToken = jwtDecode(encodedToken);
-    setUserData(decodedToken);
-    console.log(decodedToken);
-  }
+  // const [userData, setUserData] = useState(null)
+  // function logout() {
+  //   setUserData(null);
+  //   localStorage.removeItem('userToken');
+  //   navigate('/login');
+  //   // console.log('logout called');
+  // }
+  // function SaveUserData() {
+  //   let encodedToken = localStorage.getItem('userToken');
+  //   let decodedToken = jwtDecode(encodedToken);
+  //   setUserData(decodedToken);
+  //   // console.log(decodedToken);
+  // }
   useEffect(() => {
     if (localStorage.getItem('userToken')) {
       SaveUserData();
     }
-  }, [])
+  },[])
 
   // function ProtectedRoute(props) {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   //   if (localStorage.getItem('userToken') === null) {
   //      <Navigate to="/login" />
   //      return <></>
@@ -85,14 +87,15 @@ function App() {
   return (<>
     <Routes>
 
-      <Route path="/" element={<Login SaveUserData={SaveUserData} />} />
-      <Route path="/login" element={<Login SaveUserData={SaveUserData} />} />
+      <Route path="/" element={<Login />} />
+      <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      <Route path="/home" element={<><ProtectedRoute><Navbar logout={logout} /> <Home /></ProtectedRoute></>} />
-      <Route path="/booking" element={<><ProtectedRoute><Navbar logout={logout} /> <Booking /></ProtectedRoute></>} />
-      <Route path="/payment" element={<ProtectedRoute><Payment /></ProtectedRoute>} />
-      <Route path="/print" element={<><ProtectedRoute><Navbar logout={logout} /> <Print /></ProtectedRoute></>} />
+      <Route path="/home" element={<><ProtectedRoute><Navbar /> <Home /></ProtectedRoute></>} />
       <Route path="/*" element={<> <NotFound /></>} />
+      {/* <Route path="/home" element={<><Navbar logout={logout} /> <Home /></>} /> */}
+      {/* <Route path="/booking" element={<><ProtectedRoute><Navbar /> <Booking /></ProtectedRoute></>} /> */}
+      {/* <Route path="/payment" element={<ProtectedRoute><Payment /></ProtectedRoute>} /> */}
+      {/* <Route path="/print" element={<><ProtectedRoute><Navbar /> <Print /></ProtectedRoute></>} /> */}
       {/* <Route element={<ProtectedRoute />}>
         <Route path="/home" element={<><Navbar logout={logout} /> <Home /></>} />
         <Route path="/booking" element={<><Navbar logout={logout} /> <Booking /></>} />
